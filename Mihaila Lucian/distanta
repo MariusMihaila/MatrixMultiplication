@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace wasd_game
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string wasd = "wdwddw";
+            int length = wasd.Length;
+            int x=0, y=0;
+            foreach(char s in wasd)
+            {
+                switch (s)
+                {
+                    case 'a':
+                        x--;
+                        break;
+                    case 'w':
+                        y++;
+                        break;
+                    case 's':
+                        y--;
+                        break;
+                    case 'd':
+                        x++;
+                        break;
+                }
+
+            }
+
+            Console.Write(System.Math.Sqrt(x * x + y * y));
+            
+        }
+    }
+}
